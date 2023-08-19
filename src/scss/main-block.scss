@@ -1,0 +1,116 @@
+.main-block {
+	position: relative;
+	// // opacity: 0.2;
+	// background: linear-gradient(0deg, #98C3E8 28.39%, rgba(152, 195, 232, 0.2) 100%);
+	// padding-top: 190px;
+	// padding-bottom: 190px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(0deg, #98C3E8 28.39%, rgba(152, 195, 232, 0.2) 100%);
+		opacity: 0.2;
+	}
+
+	// .main-block__container
+	&__container {
+		padding-top: 190px;
+		padding-bottom: 190px;
+		position: relative;
+		opacity: 1;
+		color: $blue-second;
+
+		// &::before {
+		//   content: "";
+		//   position: absolute;
+		//   top: 0;
+		//   left: 0;
+		//   width: 100%;
+		//   height: 100%;
+		//   background: linear-gradient(0deg, #98C3E8 28.39%, rgba(152, 195, 232, 0.2) 100%);
+		//   opacity: 0.2;
+		// }
+
+		&::before {
+			// display: none;
+			content: url(../img/illustration.png);
+			// background: url(../img/illustration.png) top/cover no-repeat;
+			position: absolute;
+			top: 100px;
+			right: -190px;
+			width: 73.11117%;
+			// padding-top: 65.16564%;
+			height: 65.16564%;
+			z-index: -1;
+		}
+	}
+
+	// .main-block__title
+	&__title {
+		// color: $blue-second;
+		// font-family: Galien;
+		// font-size: 64px;
+		// font-weight: 700;
+		// line-height: 115.625%;
+		// letter-spacing: 2.56px;
+		// margin-bottom: 32px;
+		// max-width: 590px;
+	}
+
+	// .main-block__text
+	&__text {
+		opacity: 0.6;
+		margin-bottom: 71px;
+		max-width: 420px;
+	}
+
+	// .main-block__link
+	&__link {
+
+		&:hover {
+			box-shadow: 5px 10px 20px 0px rgba(53, 110, 173, 0.20);
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 72px;
+		right: -213px;
+		width: 73.11117%;
+		padding-top: 65.16564%;
+		display: none;
+	}
+}
+
+@media(max-width: 996px) {
+	.main-block {
+		// padding-top: 120px;
+		// padding-bottom: 120px;
+
+		&__container {
+			padding-top: 150px;
+			padding-bottom: 150px;
+
+			&::before {
+				// display: none;
+				content: url(../img/illustration.png);
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				width: 73.11117%;
+				height: 100%;
+				z-index: -1;
+				opacity: 0.3;
+			}
+		}
+
+		&__text {
+			opacity: 1;
+		}
+	}
+}

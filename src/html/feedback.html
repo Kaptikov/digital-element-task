@@ -1,0 +1,37 @@
+<section class="feedback">
+  <div class="feedback__container _container">
+    <h2 class="feedback__title title">Intersted to woek
+      with our team?</h2>
+    <p class="feedback__text text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna
+      aliqua. Ut enim ad minim veniam.</p>
+    <button type="button" class="feedback__btn btn">Let’s Talk</button>
+  </div>
+  <dialog class="feedback__dialog feedback__dialog--close dialog-feedback" id="myDialog">
+    <div class="dialog-feedback__wrapper">
+      <button class="dialog-feedback__btn--close" type="button" id="closeDialog"></button>
+      <form class="feedback__form form-feedback" id="form">
+
+        <h3 class="form-feedback__title">SEND US MESSAGE</h3>
+
+        <label class="form-feedback__label" for="name">Full Name</label>
+        <input class="form-feedback__input _req" type="text" id="name" name="name" placeholder="Your Name">
+
+        <label class="form-feedback__label" for="email">Email</label>
+        <input class="form-feedback__input _req _email" type="text" id="email" name="email" placeholder="Your Email">
+
+        <label class="form-feedback__label" for="message">Message:</label>
+        <textarea class="form-feedback__textarea id=" message" name="message" placeholder="Your Message"></textarea>
+
+        <button class="form-feedback__btn btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog class="feedback__dialog feedback__dialog--message" id="dialogMessage">
+    <div class="dialog-feedback--message__wrapper">
+      <h3 class="dialog-feedback--message__title title">Your message successfully sent</h3>
+      <button class="dialog-feedback--message__btn btn" type="button" id="closeDialogMessage">Cancel</button>
+    </div>
+  </dialog>
+</section>

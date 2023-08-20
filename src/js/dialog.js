@@ -6,8 +6,8 @@ const closeDialog = document.getElementById('closeDialog')
 const closeDialogMessage = document.getElementById('closeDialogMessage')
 
 closeDialog.addEventListener('click', () => {
-  modal.classList.add('feedback__dialog--close')
   modal.close()
+  document.body.classList.remove('stop--scroll')
 })
 
 closeDialogMessage.addEventListener('click', () => {
@@ -16,8 +16,7 @@ closeDialogMessage.addEventListener('click', () => {
 
 openDialog.addEventListener('click', openModalAndLockScroll)
 modalMessage.addEventListener('close', returnScroll)
-modal.addEventListener('close', returnScroll)
-openDialog.addEventListener('close', returnScroll)
+// modal.addEventListener('close', returnScroll)
 
 function openModalAndLockScroll() {
   modal.showModal()
@@ -39,5 +38,6 @@ function closeOnBackDropClick({ currentTarget, target }) {
   if (isClickedOnBackDrop) {
     dialogElement.close()
     modal.classList.add('feedback__dialog--close')
+    document.body.classList.remove('stop--scroll')
   }
 }

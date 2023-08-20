@@ -1278,13 +1278,13 @@ a:hover {
   margin-right: 16px;
 }
 .footer__link {
+  display: block;
   font-size: 16px;
   font-weight: 400;
   line-height: 162.5%;
   letter-spacing: 0.8px;
-}
-.footer__link:hover {
-  text-decoration: underline;
+  width: -moz-max-content;
+  width: max-content;
 }
 .footer__email {
   position: relative;
@@ -1322,13 +1322,24 @@ a:hover {
   margin-bottom: 16px;
 }
 .menu-footer__link {
+  position: relative;
   font-size: 16px;
   font-weight: 400;
   line-height: 162.5%;
   letter-spacing: 0.8px;
 }
-.menu-footer__link:hover {
-  text-decoration: underline;
+.menu-footer__link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  transition: 0.1s ease-in-out;
+}
+.menu-footer__link:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 996px) {
